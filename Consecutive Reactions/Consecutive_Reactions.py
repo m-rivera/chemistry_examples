@@ -22,5 +22,7 @@ ax.plot(t,C,label='[C]')
 
 ax.legend()
 ax.set_xlabel('Time / s')
+ax.set_xbound(0,t_end)
 ax.set_ylabel('[A], [B], [C] / arbitrary units')
+ax.set_ybound(0,A0)
 plt.show()
