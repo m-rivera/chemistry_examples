@@ -1,5 +1,6 @@
 #NMR Coupling Visualiser
-
+import matplotlib.pyplot as plt
+import numpy as np
 import math
 
 n = [1,1]
@@ -28,3 +29,5 @@ def construct():
                 positions[i]=positions[i]-J_coupling_constants[n_index]/2
 
     
+fig, ax = plt.subplots()
+x = np.linspace(-20,20,100)
