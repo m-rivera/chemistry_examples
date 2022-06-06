@@ -5,10 +5,9 @@ import math
 
 n = [1,1]
 J_coupling_constants = [6,2]
-
+standard_deviation = 0.125
 
 def function(x,positions,n_index):
-    standard_deviation = 0.125
     coefficient = 1
     for a in n[:n_index+1]:
         coefficient = (2**a)*coefficient
