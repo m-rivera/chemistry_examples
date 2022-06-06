@@ -4,9 +4,9 @@ import numpy as np
 
 k1 = 0.1
 k2 = 1
+t_end = 100
 
 A0 = 1
-t_end = 100
 
 fig, ax = plt.subplots()
 
