@@ -17,5 +17,8 @@ ax.plot(t,A,label='[A]')
 B = ((k1*A)/(k2-k1))*(np.exp(-k1*t)-np.exp(-k2*t))
 ax.plot(t,B,label='[B]')
 
+C = A0 - A - B
+ax.plot(t,C,label='[C]')
+
 ax.legend()
 plt.show()
