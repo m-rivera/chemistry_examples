@@ -14,5 +14,8 @@ t = np.linspace(0,t_end,t_end*10)
 A = A0*np.exp(-k1*t)
 ax.plot(t,A,label='[A]')
 
+B = ((k1*A)/(k2-k1))*(np.exp(-k1*t)-np.exp(-k2*t))
+ax.plot(t,B,label='[B]')
+
 ax.legend()
 plt.show()
