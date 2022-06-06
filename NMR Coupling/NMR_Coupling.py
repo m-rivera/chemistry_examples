@@ -37,4 +37,6 @@ for n_index in range(len(n)):
     ax.plot(x,y, label=label)
     label = label+', '
 ax.legend()
+ax.set_xlabel("Hz")
+ax.set_yticklabels([])
 plt.show()
