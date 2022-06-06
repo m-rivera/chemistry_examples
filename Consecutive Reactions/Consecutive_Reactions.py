@@ -21,4 +21,6 @@ C = A0 - A - B
 ax.plot(t,C,label='[C]')
 
 ax.legend()
+ax.set_xlabel('Time / s')
+ax.set_ylabel('[A], [B], [C] / arbitrary units')
 plt.show()
