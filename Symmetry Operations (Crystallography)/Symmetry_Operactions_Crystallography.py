@@ -37,14 +37,10 @@ fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))
 ax.plot(x, y, z, marker="o", markersize=5, color='green', label='Initial')
 ax.plot(final_coords[0], final_coords[1], final_coords[2], marker="o", markersize=5, color='red', label='Final')
 
-max_x = max([x,final_coords[0]])
-ax.plot([-max_x,max_x], [0,0], [0,0], color='k')
-
-max_y = max([y,final_coords[1]])
-ax.plot([0,0], [-max_y,max_y], [0,0], color='k')
-
-max_z = max([z,final_coords[2]])
-ax.plot([0,0], [0,0], [-max_z,max_z], color='k')
+max = max([x,y,z,max(final_coords)])
+ax.plot([-max,max], [0,0], [0,0], color='k')
+ax.plot([0,0], [-max,max], [0,0], color='k')
+ax.plot([0,0], [0,0], [-max,max], color='k')
 
 ax.set_xlabel('x')
 ax.set_ylabel('y')
