@@ -33,17 +33,17 @@ for axis, operation in enumerate(sym_operation):
             subtract = True
 
 
-fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))
+fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))    # Create a figure and a 3D axes
 ax.plot(x, y, z, marker="o", markersize=5, color='green', label='Initial')
 ax.plot(final_coords[0], final_coords[1], final_coords[2], marker="o", markersize=5, color='red', label='Final')
 
 max = max([x,y,z,max(final_coords)])
-ax.plot([-max,max], [0,0], [0,0], color='k')
-ax.plot([0,0], [-max,max], [0,0], color='k')
-ax.plot([0,0], [0,0], [-max,max], color='k')
+ax.plot([-max,max], [0,0], [0,0], color='k')    # Draw the x axis
+ax.plot([0,0], [-max,max], [0,0], color='k')    # Draw the y axis
+ax.plot([0,0], [0,0], [-max,max], color='k')    # Draw the z axis
 
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax.set_zlabel('z')
+ax.set_xlabel('x')  # set the label of the x axis
+ax.set_ylabel('y')  # set the label of the y axis
+ax.set_zlabel('z')  # set the label of the z axis
 ax.legend()
 plt.show()
