@@ -17,20 +17,18 @@ for axis, operation in enumerate(sym_operation):    # Loop through the x, y and 
     for character in operation:    # Loop through the characters in the symmetry operation
         temp = 0
         if character == 'x':
-            temp += x
+            temp += x   # If the character is x, add the x coordinate to the temporary variable
         elif character == 'y':
-            temp += y
+            temp += y   # If the character is y, add the y coordinate to the temporary variable
         elif character == 'z':
-            temp += z
-    
+            temp += z   # If the character is z, add the z coordinate to the temporary variable
+
         if subtract == True:
-            temp = -temp
-
-        final_coords[axis] += temp
+            temp = -temp    # If the previous character was a '-' then set the temp variable to negative
+        final_coords[axis] += temp  # Add the temporary variable to the final coordinate
         subtract = False
-
         if character == '-':
-            subtract = True
+            subtract = True   # If the character is a '-' then set the subtract variable to True
 
 
 fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))    # Create a figure and a 3D axes
