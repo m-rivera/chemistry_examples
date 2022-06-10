@@ -1,25 +1,25 @@
 # Pressure/Volume vs Mole Fraction (Thermodynamics)
 import matplotlib.pyplot as plt
 
-A_star = 20
-B_star = 15
-y_axis = 'p'
+A_star = 20 # Partial pressure/volume of pure A
+B_star = 15 # Partial pressure/volume of pure B
+y_axis = 'p'    # Whether the y-axis is p or V
 
 if y_axis.lower() == 'p':
-    label =  'Pressure'
+    label =  'Pressure' # Label for the y-axis
 elif y_axis.upper() == 'V':
-    label =  'Volume'
+    label =  'Volume'   # Label for the y-axis
 else:
     label = None
 
 fig, ax = plt.subplots()
-ax.plot([0,1], [B_star,0], color='#555F32', label='$'+y_axis+'_B$')
-ax.plot([0,1], [0,A_star], color='#5F0F5F', label='$'+y_axis+'_A$')
-ax.plot([0,1], [B_star,A_star], color='k', label='Total '+label+' $'+y_axis+'$')
+ax.plot([0,1], [B_star,0], color='#555F32', label='$'+y_axis+'_B$') # Plots a green line between (0,B_star) and (1,0)
+ax.plot([0,1], [0,A_star], color='#5F0F5F', label='$'+y_axis+'_A$') # Plots a purple line between (0,0) and (1,A_star)
+ax.plot([0,1], [B_star,A_star], color='k', label='Total '+label+' $'+y_axis+'$') # Plots a black line between (0,B_star) and (1,A_star)
 
-ax.set_xlabel('Mole Fraction of A $x_A$')
-ax.set_ylabel(label+'  $'+y_axis+'$')
-ax.set_xbound(0,1)
-ax.set_ybound(0)
-ax.legend()
-plt.show()
+ax.set_xlabel('Mole Fraction of A  $x_A$')  # Sets the x-axis label
+ax.set_ylabel(label+'  $'+y_axis+'$')   # Sets the y-axis label
+ax.set_xbound(0,1)  # Sets the x-axis bounds
+ax.set_ybound(0)    # Sets the y-axis bounds
+ax.legend()        # Plots the legend
+plt.show()        # Shows the plot
