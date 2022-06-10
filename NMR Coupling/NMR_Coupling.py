@@ -11,7 +11,7 @@ def function(x,positions,n_index):  # Function to calculate the Gaussian curves
     coefficient = 1
     for a in n[:n_index+1]:
         coefficient = (2**a)*coefficient    # Calculate the number of curves required
-    y=x-x
+    y = np.zeros(len(x))    # Create an array of zeros to store the y values
     if n_index == -1:
         coefficient = 1
     for position in positions:
