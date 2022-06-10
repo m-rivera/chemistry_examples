@@ -1,8 +1,14 @@
 # Pressure/Volume vs Mole Fraction (Thermodynamics)
 import matplotlib.pyplot as plt
 
-pA_star = 20
-pB_star = 15
+A_star = 20
+B_star = 15
 y_axis = 'p'
 
-label =  'Pressure (GPa)'
+if y_axis.lower() == 'p':
+    label =  'Pressure (Pa)'
+elif y_axis.upper() == 'V':
+    label =  'Volume (cm\u00b3)'
+else:
+    label = None
+
