@@ -1,4 +1,4 @@
-#NMR Coupling Visualiser
+# NMR Coupling Visualiser
 import matplotlib.pyplot as plt
 import numpy as np
 import math
