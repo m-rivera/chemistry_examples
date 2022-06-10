@@ -1,5 +1,4 @@
 #Symmetry Operations (Crystallography)
-from re import X
 import matplotlib.pyplot as plt
 
 initial_coords = [1,2,3]    # Initial coordinates of the atom
