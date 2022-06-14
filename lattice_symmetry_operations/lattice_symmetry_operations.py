@@ -1,17 +1,17 @@
 # Symmetry Operations (Crystallography)
 import matplotlib.pyplot as plt
 
-initial_coords = [1,2,3]    # Initial coordinates of the atom
+initial_coords = [1, 2, 3]    # Initial coordinates of the atom
 sym_operation = 'x,x+y,y-z'   # Symmetry operation
 
-final_coords = [0,0,0]
-sym_operation = sym_operation.split(',')    # Split the symmetry operation into its x, y and z components
+final_coords = [0, 0, 0]
+# Split the symmetry operation into its x, y and z components
+sym_operation = sym_operation.split(',')
 
-x = initial_coords[0]
-y = initial_coords[1]
-z = initial_coords[2]
+x, y, z = initial_coords
 
-for axis, operation in enumerate(sym_operation):    # Loop through the x, y and z components of the symmetry operation
+# Loop through the x, y and z components of the symmetry operation
+for axis, operation in enumerate(sym_operation):
     subtract = False
     for character in operation:    # Loop through the characters in the symmetry operation
         temp = 0
@@ -24,24 +24,25 @@ for axis, operation in enumerate(sym_operation):    # Loop through the x, y and 
 
         if subtract == True:
             temp = -temp    # If the previous character was a '-' then set the temp variable to negative
-        final_coords[axis] += temp  # Add the temporary variable to the final coordinate
+        # Add the temporary variable to the final coordinate
+        final_coords[axis] += temp
         subtract = False
         if character == '-':
             subtract = True   # If the character is a '-' then set the subtract variable to True
 
 
-fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))    # Create a figure and a 3D axes
+fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))
+ax.plot(x, y, z, marker="o", markersize=5, color='green',
+        label='Initial')
+ax.plot(final_coords[0], final_coords[1], final_coords[2], marker="o",
+        markersize=5, color='red', label='Final')
+max = max([x, y, z, max(final_coords)])
+ax.plot([-max, max], [0, 0], [0, 0], color='k')
+ax.plot([0, 0], [-max, max], [0, 0], color='k')
+ax.plot([0, 0], [0, 0], [-max, max], color='k')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+ax.legend()
 
-ax.plot(x, y, z, marker="o", markersize=5, color='green', label='Initial')  # Plot the initial coordinates
-ax.plot(final_coords[0], final_coords[1], final_coords[2], marker="o", markersize=5, color='red', label='Final')    # Plot the final coordinates
-
-max = max([x,y,z,max(final_coords)])
-ax.plot([-max,max], [0,0], [0,0], color='k')    # Draw the x axis
-ax.plot([0,0], [-max,max], [0,0], color='k')    # Draw the y axis
-ax.plot([0,0], [0,0], [-max,max], color='k')    # Draw the z axis
-
-ax.set_xlabel('x')  # Set the label of the x axis
-ax.set_ylabel('y')  # Set the label of the y axis
-ax.set_zlabel('z')  # Set the label of the z axis
-ax.legend() # Add a legend to the figure
-plt.show()  # Display the figure
+plt.show()
