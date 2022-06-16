@@ -1,10 +1,10 @@
-# Symmetry Operations (Crystallography)
+# Lattice Symmetry Operations
 import matplotlib.pyplot as plt
 
-initial_coords = [1, 2, 3]    # Initial coordinates of the atom
+initial_coords = [1, 2, 3]    # initial coordinates of the atom
 x, y, z = initial_coords
 
-sym_operation = [-x, y, z]   # Symmetry operation
+sym_operation = [-x, y, z]   # symmetry operation
 x2, y2, z2 = sym_operation
 
 fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))
