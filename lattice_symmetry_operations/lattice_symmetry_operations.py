@@ -8,10 +8,12 @@ sym_operation = [-x, y, z]   # symmetry operation
 x2, y2, z2 = sym_operation
 
 fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))
-max = max([x, y, z, x2, y2, z2])
-ax.plot([-max, max], [0, 0], [0, 0], color='k')
-ax.plot([0, 0], [-max, max], [0, 0], color='k')
-ax.plot([0, 0], [0, 0], [-max, max], color='k')
+maximum = max([x, y, z, x2, y2, z2])
+minimum = min([x, y, z, x2, y2, z2])
+maximmum = maximum([maximum,-minimum])
+ax.plot([-maximum, maximum], [0, 0], [0, 0], color='k')
+ax.plot([0, 0], [-maximum, maximum], [0, 0], color='k')
+ax.plot([0, 0], [0, 0], [-maximum, maximum], color='k')
 ax.plot(x, y, z, marker="o", markersize=5, color='green',
         label='Initial $('+str(x)+','+str(y)+','+str(z)+')$')
 ax.plot([0, x], [0, 0], [0, 0], color='green', linestyle='dashed')
