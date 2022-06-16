@@ -10,7 +10,7 @@ x2, y2, z2 = sym_operation
 fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))
 maximum = max([x, y, z, x2, y2, z2])
 minimum = min([x, y, z, x2, y2, z2])
-maximmum = maximum([maximum,-minimum])
+maximmum = max([maximum,-minimum])
 ax.plot([-maximum, maximum], [0, 0], [0, 0], color='k')
 ax.plot([0, 0], [-maximum, maximum], [0, 0], color='k')
 ax.plot([0, 0], [0, 0], [-maximum, maximum], color='k')
