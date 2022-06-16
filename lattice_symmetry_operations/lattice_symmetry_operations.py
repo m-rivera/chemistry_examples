@@ -32,14 +32,22 @@ for axis, operation in enumerate(sym_operation):
 
 
 fig, ax = plt.subplots(subplot_kw=dict(projection='3d'))
-ax.plot(x, y, z, marker="o", markersize=5, color='green',
-        label='Initial')
-ax.plot(final_coords[0], final_coords[1], final_coords[2], marker="o",
-        markersize=5, color='red', label='Final')
 max = max([x, y, z, max(final_coords)])
 ax.plot([-max, max], [0, 0], [0, 0], color='k')
 ax.plot([0, 0], [-max, max], [0, 0], color='k')
 ax.plot([0, 0], [0, 0], [-max, max], color='k')
+ax.plot(x, y, z, marker="o", markersize=5, color='green',
+        label='Initial')
+ax.plot([0, x], [0, 0], [0, 0], color='green',linestyle='dashed')
+ax.plot([x, x], [0, y], [0, 0], color='green',linestyle='dashed')
+ax.plot([x, x], [y, y], [0, z], color='green',linestyle='dashed')
+ax.plot(final_coords[0], final_coords[1], final_coords[2], marker="o",
+        markersize=5, color='red', label='Final')
+ax.plot([0, final_coords[0]], [0, 0], [0, 0], color='red',linestyle='dashed')
+ax.plot([final_coords[0], final_coords[0]], [0, final_coords[1]], [0, 0], color='red',linestyle='dashed')
+ax.plot([final_coords[0], final_coords[0]], [final_coords[1], final_coords[1]], [0, final_coords[2]], color='red',linestyle='dashed')
+
+
 ax.set_xlabel('x')
 ax.set_ylabel('y')
 ax.set_zlabel('z')
