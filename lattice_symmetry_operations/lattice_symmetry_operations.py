@@ -25,9 +25,9 @@ ax.plot([0, x2], [0, 0], [0, 0], color='red', linestyle='dashed')
 ax.plot([x2, x2], [0, y2], [0, 0], color='red', linestyle='dashed')
 ax.plot([x2, x2], [y2, y2], [0, z2], color='red', linestyle='dashed')
 
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax.set_zlabel('z')
+ax.set_xlabel('$x$')
+ax.set_ylabel('$y$')
+ax.set_zlabel('$z$')
 ax.legend()
 
 plt.show()
