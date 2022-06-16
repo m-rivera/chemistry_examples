@@ -12,7 +12,7 @@ x, y, z = initial_coords
 
 # Loop through the x, y and z components of the symmetry operation
 for axis, operation in enumerate(sym_operation):
-    subtract = False
+    subtract = None
     for character in operation:    # Loop through the characters in the symmetry operation
         temp = 0
         if character == 'x':
