@@ -1,4 +1,4 @@
-# Lever Rule (Thermodynamics)
+"""Lever Rule (Thermodynamics)"""
 import matplotlib.pyplot as plt
 import numpy as np
 

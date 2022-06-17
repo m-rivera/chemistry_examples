@@ -1,4 +1,4 @@
-# Pressure/Volume vs Mole Fraction (Thermodynamics)
+"""Pressure vs Mole Fraction (Thermodynamics)"""
 import matplotlib.pyplot as plt
 
 # parameters
