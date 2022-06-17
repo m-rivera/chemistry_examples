@@ -2,8 +2,8 @@
 import matplotlib.pyplot as plt
 
 # parameters
-pA_star = 20  # partial pressure/volume of pure A
-pB_star = 15  # partial pressure/volume of pure B
+pA_star = 20  # partial pressure of pure A
+pB_star = 15  # partial pressure of pure B
 units = 'Pa'    # units
 
 # plotting
