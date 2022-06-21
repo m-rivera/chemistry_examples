@@ -8,7 +8,7 @@ L = 30e-2  # laser cavity length (m)
 N = 10  # number of cavity modes
 
 # equations
-x = np.linspace(0, 5, 10000)  # x = ct/2L
+x = np.linspace(0, 5.0000001, 10000)  # x = ct/2L
 I = (np.sin(N * const.pi * x) ** 2) / (
     np.sin(const.pi * x) ** 2
 )  # equation for calculating I
