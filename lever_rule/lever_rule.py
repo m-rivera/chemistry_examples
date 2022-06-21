@@ -9,12 +9,12 @@ units = "Pa"  # units
 
 
 # equations
-pA = np.linspace(0, pA_star, 100)
-pB = np.linspace(pB_star, 0, 100)
-p = pA + pB
+pA = np.linspace(0, pA_star, 100)  # partial pressure of A
+pB = np.linspace(pB_star, 0, 100)  # partial pressure of B
+p = pA + pB  # total pressure
 xA = np.linspace(0.0000000001, 1, 100)
 yA = pA / p
-zA = xA - ((xA - yA) / (1 + (xA / yA)))
+zA = xA + ((yA - xA) / (1 + (xA / yA)))
 
 # plotting
 fig, ax = plt.subplots()
