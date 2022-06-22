@@ -4,8 +4,8 @@ import numpy as np
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
 # parameters
-r = 2
-ml = 5
+r = 1
+ml = 2
 
 # equations
 points = 3600
