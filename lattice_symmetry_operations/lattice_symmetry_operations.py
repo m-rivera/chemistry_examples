@@ -16,6 +16,12 @@ maximmum = max([maximum, -minimum])
 ax.plot([-maximum, maximum], [0, 0], [0, 0], color="k")
 ax.plot([0, 0], [-maximum, maximum], [0, 0], color="k")
 ax.plot([0, 0], [0, 0], [-maximum, maximum], color="k")
+ax.scatter(
+    [x, x, -maximum], [maximum, y, y], [z, -maximum, z],
+    marker="x",
+    color="green",
+    alpha=1,
+)
 ax.plot(
     x, y, z,
     marker="o",
@@ -26,6 +32,12 @@ ax.plot(
 ax.plot([0, x], [0, 0], [0, 0], color="green", linestyle="dashed")
 ax.plot([x, x], [0, y], [0, 0], color="green", linestyle="dashed")
 ax.plot([x, x], [y, y], [0, z], color="green", linestyle="dashed")
+ax.scatter(
+    [x2, x2, -maximum], [maximum, y2, y2], [z2, -maximum, z2],
+    marker="x",
+    color="red",
+    alpha=1,
+)
 ax.plot(
     x2, y2, z2,
     marker="o",
