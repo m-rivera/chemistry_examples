@@ -5,8 +5,8 @@ from scipy.constants import c, h, pi, value
 import numpy as np
 
 # parameters
-m1 = 1.00794  # mass of the first atom
-m2 = 35.453  # mass of the second atom
+m1 = 1.00794  # atomic mass of the first atom
+m2 = 35.453  # atomic mass of the second atom
 we = 298700  # ωe in m-1
 wexe = 5281.86  # ωexe in m-1
 re = 1.27455e-10  # equilibrium bond length in m
