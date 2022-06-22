@@ -11,11 +11,11 @@ ml = 5
 points = 3600
 phi = np.linspace(0, 360, points)
 psi = np.cos(ml * phi)  # real (cosine) parts of the wavefunction
+x = r * np.cos(phi)
+y = r * np.sin(phi)
 
 # plotting
 fig, ax = plt.subplots(subplot_kw=dict(projection="3d"))
-x = r * np.cos(phi)
-y = r * np.sin(phi)
 ax.scatter(x, y, psi, c=x - y)
 for i in range(len(x) - 1):
     verts = [(x[i], y[i], psi[i]), (x[i + 1], y[i + 1], psi[i + 1])] + [
