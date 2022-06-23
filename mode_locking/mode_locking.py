@@ -25,7 +25,6 @@ secax = ax.secondary_xaxis(
 )
 secax.set_xlabel("Time, $t$ ($ns$)")
 ax.set_xlabel("Time, $ct/2L$")
-ax.set_yticklabels([])
-ax.set_ylabel("Intensity, $I$")
+ax.set_ylabel("Intensity, $I$ ($a.u.$)")
 
 plt.show()
