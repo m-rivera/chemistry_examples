@@ -7,7 +7,7 @@ from scipy.constants import k, eV
 # parameters
 T = None # temperature (K)
 T_min = None # min temperature (K)
-T_max = None
+T_max = None # max temperature (K)
 
 epsilon_i = None # energy state (eV)
 epsilon_0 = None # lowest energy state (eV)
