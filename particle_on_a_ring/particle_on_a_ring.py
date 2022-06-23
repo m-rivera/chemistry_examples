@@ -8,7 +8,7 @@ r = 1 # radius of the ring
 ml = 2 # quantum number ml
 
 # equations
-points = 360*ml # number of points to be plotted
+points = 360*(ml+1) # number of points to be plotted
 phi = np.linspace(0, 2*np.pi, points)
 psi = np.cos(ml * phi)  # real (cosine) parts of the wavefunction
 x = r * np.cos(phi) # converts from polar to cartesian coordinates
@@ -16,7 +16,7 @@ y = r * np.sin(phi) # converts from polar to cartesian coordinates
 
 # plotting
 fig, ax = plt.subplots(subplot_kw=dict(projection="3d"))
-ax.scatter(x, y, psi, c=phi)
+ax.scatter(x, y, psi, c=psi)
 for i in range(len(x) - 1):
     verts = [(x[i], y[i], psi[i]), (x[i + 1], y[i + 1], psi[i + 1])] + [
         (x[i + 1], y[i + 1], np.zeros(points)[i + 1]),
