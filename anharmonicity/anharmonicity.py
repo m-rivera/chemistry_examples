@@ -47,7 +47,7 @@ ax.plot(
     [1, 1],
     color="grey",
     linestyle="dashed",
-    label="$D_0$ = " + str(round(De / 100)) + " cm$^{-1}$",
+    label="$D_e$ = " + str(round(De / 100)) + " cm$^{-1}$",
 )
 ax.set_ybound(0, Gv_harmonic[-1])
 ax.set_xbound(0, rmax)
