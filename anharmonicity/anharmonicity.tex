@@ -1,0 +1,35 @@
+\documentclass{article}
+\begin{document}
+\section{Anharmonicity}
+
+The following Python script will plot Harmonic (teal) and Morse (orange) potentials and their respective energy levels for a diatomic molecule. \par\medskip 
+\noindent The script uses equations from the lecture materials to plot the Harmonic potentials and energy levels:
+\[V(x) = \frac{1}{2} kx^2\]
+\[G(v) = \omega_e(v+\frac{1}{2})\]
+Likewise, the Morse potentials and energy levels are calculated using:
+\[V(x) = hcD_e(1-e^{-ax})^2\]
+\[G(v) = \omega_e(v+\frac{1}{2})-\omega_ex_e(v+\frac{1}{2})^2\]
+A dotted line is also plotted to show the dissociation limit $D_0$.
+
+\section{How to use the script}
+Various parameters can be adjusted: 
+\begin{itemize}
+\item \texttt{m1} - atomic mass of the first atom.
+\item \texttt{m2} - atomic mass of the second atom.
+\item \texttt{we} - harmonic wavenumber.
+\item \texttt{wexe} - first anharmonic wavenumber.
+\item \texttt{re} - equilibrium bond length.
+\item \texttt{rmax} - upper bound for r used for plotting (try changing this if the x axis is too long/short).
+\item \texttt{n\_levels} - number of energy levels plotted by the script (this also controls the y-axis bounds).
+\end{itemize}
+Running the script by clicking Activate, followed by Run, will produce a plot.
+
+\section{Things to try}
+\begin{enumerate}
+\item Read the script and take note of the parameters and formulae. The defaults refer to a molecule of HCl. Run the code. Observe the differences between the Harmonic and Morse energy levels.
+\item Adjust the number of energy levels to 5. Make predictions of what the plot should look like and run the script.
+\item Change each parameter one at a time. What are their effects on the plot?
+\item Look up parameters for other diatomics and alter the script. Are there any differences? If so, why?
+\end{enumerate}
+
+\end{document}
