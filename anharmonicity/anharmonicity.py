@@ -6,10 +6,10 @@ from scipy.constants import c, h, pi, value
 import numpy as np
 
 # parameters
-m1 = 1.00794  # atomic mass of the first atom
+m1 = 1.00784  # atomic mass of the first atom
 m2 = 35.453  # atomic mass of the second atom
 we = 298700  # ω_e in m-1
-wexe = 5281.86  # ω_e x_e in m-1
+wexe = 5212  # ω_e x_e in m-1
 re = 1.27455e-10  # equilibrium bond length in m
 rmax = 0.6e-9  # maximum internuclear separation in m
 n_levels = 30  # number of energy levels to be plotted
