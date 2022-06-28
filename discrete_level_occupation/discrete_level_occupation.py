@@ -10,11 +10,10 @@ T_max = 40000  # max temperature (K)
 levels = 5  # number of energy levels
 degeneracies = [1, 1, 1, 1, 1]  # degeneracies of each energy level
 separation = 0.1  # separation between energy levels
-epsilon_0 = 0  # lowest energy state (eV)
 
 # equations
 energies = np.arange(
-    epsilon_0, epsilon_0 + levels * separation, separation
+    0, levels * separation, separation
 )  # calculates the energies of each level
 T = np.linspace(T_min, T_max, 500)
 
@@ -28,7 +27,7 @@ for i, c in enumerate(colours):
 # more equations
 for t in T:
     occupation = degeneracies * np.exp(
-        -(energies - epsilon_0) / (k / eV * t)
+        -(energies) / (k / eV * t)
     )  # calculates occupation of each energy level
     occupation = occupation / np.sum(
         occupation
