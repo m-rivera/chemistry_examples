@@ -7,26 +7,25 @@ from scipy.constants import k, eV
 # parameters
 T_min = 1e-30  # min temperature (K)
 T_max = 40000  # max temperature (K)
-levels = 5  # number of energy levels
-degeneracies = [1, 1, 1, 1, 1]  # degeneracies of each energy level
+levels = [1, 1, 1, 1, 1]  # degeneracies of each energy level
 separation = 0.1  # separation between energy levels
 
 # equations
 energies = np.arange(
-    0, levels * separation, separation
+    0, len(levels) * separation, separation
 )  # calculates the energies of each level
 T = np.linspace(T_min, T_max, 500)
 
 # plotting
 fig, ax = plt.subplots(subplot_kw=dict(projection="3d"))
 red = colour.Color("red")
-colours = list(red.range_to(colour.Color("blue"), levels))
+colours = list(red.range_to(colour.Color("blue"), len(levels)))
 for i, c in enumerate(colours):
     colours[i] = c.rgb
 
 # more equations
 for t in T:
-    occupation = degeneracies * np.exp(
+    occupation = levels * np.exp(
         -(energies) / (k / eV * t)
     )  # calculates occupation of each energy level
     occupation = occupation / np.sum(
