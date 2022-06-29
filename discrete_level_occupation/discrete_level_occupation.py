@@ -1,4 +1,4 @@
-"""Boltzmann Distribution 2"""
+"""Discrete Level Occupation"""
 import matplotlib.pyplot as plt
 import numpy as np
 import colour
