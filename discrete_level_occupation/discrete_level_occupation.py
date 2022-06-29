@@ -11,8 +11,8 @@ levels = [1, 1, 1, 1, 1]  # degeneracies of each energy level
 separation = 0.1  # separation between energy levels
 
 # equations
-energies = np.arange(
-    0, len(levels) * separation, separation
+energies = np.linspace(
+    0, (len(levels)-1) * separation, len(levels)
 )  # calculates the energies of each level
 T = np.linspace(T_min, T_max, 500)
 
@@ -45,6 +45,6 @@ for t in T:
 ax.set_xlabel("Temperature, $T$ (K)")
 ax.set_ylabel("Energy level (eV)")
 ax.set_zlabel(r"Energy level occupation, $\frac{n}{N}$")
-ax.view_init(elev=15, azim=120)
+ax.view_init(elev=7.5, azim=120)
 
 plt.show()
