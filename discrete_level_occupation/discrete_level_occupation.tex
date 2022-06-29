@@ -1,0 +1,27 @@
+\documentclass{article}
+\begin{document}
+\section{Discrete level occupation}
+
+The following Python script will plot the occupation of evenly spaced energy levels within a given temperature range. \par\medskip 
+\noindent The script modifies the equation from the lecture material to give occupancy as a fraction:
+\[\frac{n_i}{N} = \frac{g_ie^-\frac{e_i}{kT}}{N} \]
+
+\section{How to use the script}
+Various parameters can be adjusted: 
+\begin{itemize}
+\item \texttt{T\_min} - lower bound for the temperature axis (Note: $T\neq0$, use 1e-30 instead).
+\item \texttt{T\_max} - upper bound for the temperature axis.
+\item \texttt{degeneracies} - degeneracies of each energy level. To change the number of levels, add additional values for degeneracy (e.g. [1, 2, 3, 4, 5, 6]).
+\item \texttt{separation} - separation between energy levels.
+\end{itemize}
+Running the script by clicking Activate, followed by Run, will produce a plot.
+
+
+\section{Things to try}
+\begin{enumerate}
+\item Read the script and take note of the parameters and formulae. Run the code. Why does the second energy level have a maximum?
+\item Increase the degeneracy of one of the levels to 2. What happens to its occupancy? Likewise, what happens to the occupancy of the other levels?
+\item Change the number of energy levels. What happens to the occupancy?
+\end{enumerate}
+
+\end{document}
