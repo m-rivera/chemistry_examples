@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import colour
-from scipy.constants import k, eV
+import scipy.constants as const
 
 # parameters
 T_min = 1e-30  # min temperature (K)
@@ -26,7 +26,7 @@ for i, c in enumerate(colours):
 # more equations
 for t in T:
     occupation = levels * np.exp(
-        -(energies) / (k / eV * t)
+        -(energies) / (const.k / const.eV * t)
     )  # calculates occupation of each energy level
     occupation = occupation / np.sum(
         occupation
