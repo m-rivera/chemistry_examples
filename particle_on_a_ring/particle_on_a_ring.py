@@ -7,7 +7,7 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 ml = 2 # quantum number ml
 
 # equations
-points = 360*(ml+1) # number of points to be plotted
+points = 180*(ml+1) # number of points to be plotted
 phi = np.linspace(0, 2*np.pi, points)
 psi = np.cos(ml * phi)  # real (cosine) parts of the wavefunction
 x = np.cos(phi) # converts from polar to cartesian coordinates
