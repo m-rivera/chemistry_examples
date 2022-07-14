@@ -1,0 +1,24 @@
+# Lever rule
+
+The following Python script will plot three lines, plotting $x_A$, $y_A$ and $z_A$ against total pressure. Given this is an ideal system, the plot of $x_A$ against $p$ is linear. $y_A$ is calculated using:
+$$y_A=\frac{p_A}{p}$$
+The Lever rule is rearranged:
+$$n_\alpha l_\alpha=n_\beta l_\beta$$
+$$\frac{n_\alpha}{n_\beta}=\frac{l_\beta}{l_\alpha}$$
+We know that:
+$$n_\beta-n_\alpha=l_\alpha+l_\beta$$
+Therefore:
+$$\frac{n_\beta-n_\alpha}{l_\alpha}=1+\frac{l_\beta}{l_\alpha}$$
+$$\frac{n_\beta-n_\alpha}{l_\alpha}=1+\frac{n_\alpha}{n_\beta}$$
+$$l_\alpha=\frac{n_\beta-n_\alpha}{1+\frac{n_\alpha}{n_\beta}}$$
+And $z_A$ is calculated by:
+$$z_A=n_\alpha+l_\alpha$$
+$$z_A=n_\alpha+\frac{n_\beta-n_\alpha}{1+\frac{n_\alpha}{n_\beta}}$$
+$$z_A=x_A+\frac{y_A-x_A}{1+\frac{x_A}{y_A}}$$
+
+## How to use the script
+The pressures of the pure components can be altered in the script. Running the script by clicking Activate, followed by Run, will produce the plot. The units parameter can be changed to alter the label on the y-axis.
+
+## Things to try
+1. Alter the pressures of pure A and B. Try values where $p_A*>>p_B*$, $p_A*>p_B*$ and $p_A*=p_B*$. What happens to the difference between $x_A$ and $y_A$?
+2. Alter the pressures of pure A and B to 15 Pa and 5 Pa. Why why is $z_A$ closer to $y_A$ at smaller values?
