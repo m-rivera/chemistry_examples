@@ -14,7 +14,7 @@ separation = 0.1  # separation between energy levels
 energies = np.linspace(
     0, (len(levels)-1) * separation, len(levels)
 )  # calculates the energies of each level
-T = np.linspace(T_min, T_max, 500)
+T = np.linspace(T_min, T_max, 200)
 
 # plotting
 fig, ax = plt.subplots(subplot_kw=dict(projection="3d"))
