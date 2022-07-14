@@ -19,9 +19,9 @@ zA = xA + ((yA - xA) / (1 + (xA / yA)))
 # plotting
 fig, ax = plt.subplots()
 # plots a blue line for xA against p
-ax.plot(xA, p, color="#2369B4", label="$x_A$")
+ax.plot(xA, p, color="teal", label="$x_A$")
 # plots an orange line for yA against p
-ax.plot(yA, p, color="#E66919", label="$y_A$")
+ax.plot(yA, p, color="darkorange", label="$y_A$")
 # plots a dashed line for zA against p
 ax.plot(zA, p, color="grey", label="$z_A$", linestyle="dashed")
 ax.set_xlabel("Mole Fraction of A  $z_A$")
