@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 initial_coords = [1, 2, 3]  # initial coordinates of the atom
 x, y, z = initial_coords
 
-sym_operator = [-x, y, z]  # symmetry operatior
+sym_operator = [-x, y, z]  # symmetry operator
 x2, y2, z2 = sym_operator
 
 # plotting
