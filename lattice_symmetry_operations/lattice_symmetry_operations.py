@@ -1,4 +1,4 @@
-"""Lattice Symmetry Operations"""
+"""Lattice Symmetry Operations (Crystallography)"""
 import matplotlib.pyplot as plt
 
 # parameters

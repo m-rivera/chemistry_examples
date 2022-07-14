@@ -1,4 +1,4 @@
-"""Consecutive Reactions"""
+"""Consecutive Reactions (Kinetics)"""
 import matplotlib.pyplot as plt
 import numpy as np
 

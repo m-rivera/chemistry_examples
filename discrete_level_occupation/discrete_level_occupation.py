@@ -1,4 +1,4 @@
-"""Discrete Level Occupation"""
+"""Discrete Level Occupation (Statistical Mechanics)"""
 import matplotlib.pyplot as plt
 import numpy as np
 import colour

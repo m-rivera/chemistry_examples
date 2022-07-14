@@ -1,4 +1,4 @@
-"""Mode Locking"""
+"""Mode Locking (Laser Chemistry)"""
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy.constants as const
