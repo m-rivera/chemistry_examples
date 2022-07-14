@@ -9,10 +9,10 @@ units = "Pa"  # units
 # plotting
 fig, ax = plt.subplots()
 
-# plots a green line between (0,B_star) and (1,0)
-ax.plot([0, 1], [pB_star, 0], color="#555F32", label="$p_B$")
-# plots a purple line between (0,0) and (1,A_star)
-ax.plot([0, 1], [0, pA_star], color="#5F0F5F", label="$p_A$")
+# plots a blue line between (0,B_star) and (1,0)
+ax.plot([0, 1], [pB_star, 0], color="teal", label="$p_B$")
+# plots an orange line between (0,0) and (1,A_star)
+ax.plot([0, 1], [0, pA_star], color="darkorange", label="$p_A$")
 # plots a black line between (0,B_star) and (1,A_star)
 ax.plot([0, 1], [pB_star, pA_star], color="k", label="Total pressure $p$")
 ax.set_xlabel("Mole Fraction of A  $x_A$")
